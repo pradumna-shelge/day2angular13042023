@@ -8,14 +8,20 @@ import { datavaild } from '../validation';
   styleUrls: ['./formparent.component.css']
 })
 export class FormparentComponent implements OnInit {
-  arr:datavaild[]=[{'id':0,'name':'','email':'','address':'','gender':''}]
+  arr:datavaild[]= [];
 
-  obj:datavaild={'id':0,'name':'','email':'','address':'','gender':''}
+  obj={}as datavaild;
   index=0
   
   
   addData(){
-    this.arr.push({
+
+    if(this.obj.name.length <3 )alert('enter proper name')
+    else if(this.obj.email.length < 10)alert('enter proper Email')
+   else if(this.obj.address.length < 10)alert('please enter address')
+   else if((this.obj.gender === "select gender") )alert('please select gender')
+
+   else{ this.arr.push({
       id:this.index,
       name:this.obj.name,
       email:this.obj.email,
@@ -24,6 +30,7 @@ export class FormparentComponent implements OnInit {
     })
     this.index+=1
     
+  }
   }
   constructor() { }
 

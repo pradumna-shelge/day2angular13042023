@@ -7,5 +7,5 @@ import { datavaild } from '../validation';
   styleUrls: ['./details.component.css']
 })
 export class DetailsComponent {
-@Input() ob:datavaild={'id':0,'name':'','email':'','address':'','gender':''}
+@Input() ob:datavaild={}as datavaild
 }

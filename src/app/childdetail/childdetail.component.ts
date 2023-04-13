@@ -1,5 +1,4 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Data } from '@angular/router';
 import { datavaild } from '../validation';
 
 @Component({
@@ -8,8 +7,8 @@ import { datavaild } from '../validation';
   styleUrls: ['./childdetail.component.css']
 })
 export class ChilddetailComponent implements OnInit {
-@Input() item:datavaild[]=[{id:0,name:'',email:'',address:'',gender:''}]
-obj:datavaild={'id':0,'name':'','email':'','address':'','gender':''}
+@Input() item:datavaild[]=[]
+obj={}as datavaild
 i=0;
 get(ob:datavaild){
   this.obj=ob

@@ -1,0 +1,8 @@
+<ng-container *ngFor="let it of item">
+    <button (click)="get(it)" *ngIf="it.name!=''">{{it.name}}</button >
+</ng-container>
+
+<div *ngIf="i>0">
+
+    <app-details [ob] ='obj'></app-details>
+</div>

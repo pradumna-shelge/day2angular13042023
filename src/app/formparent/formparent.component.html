@@ -1,0 +1,13 @@
+<div>
+  <input type="text" placeholder="enter name" [(ngModel)]="obj.name" />
+  <input type="text" placeholder="enter emial" [(ngModel)]="obj.email" />
+  <input type="text" placeholder="enter address" [(ngModel)]="obj.address" />
+  <input type="text" placeholder="gender" [(ngModel)]="obj.gender" />
+
+  <button (click)="addData()">Submit</button>
+</div>
+
+<div *ngIf="index > 0">
+  <app-childdetail [item]="arr"></app-childdetail>
+</div>
+
